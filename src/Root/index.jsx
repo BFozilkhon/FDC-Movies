@@ -11,13 +11,13 @@ const Root = () => {
   return (
       <Routes>
         <Route element={<Navbar/>}>
-           <Route path='/' element={<Login />} />
            <Route path='/home' element={<Opener />} />
            <Route path='/movies' element={<Kontakt />} />
            <Route path='/favourite' element={<Favourite />} />
            <Route path='/music' element={<Music />} />
            <Route path='/api' element={<h1>Api</h1>} />
         </Route>
+          <Route path='/' element={<Login />} />
       </Routes>
   );
 };
