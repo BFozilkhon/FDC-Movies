@@ -1,4 +1,4 @@
-import { createSlice, useEffect } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 const localData = localStorage.getItem('Array');
 const getContext = createSlice({
@@ -11,7 +11,7 @@ const getContext = createSlice({
   reducers: {
     save: (state, action) => {
       var count = 0;
-      state.mock.map((value) => value.id == action.payload.ids && count++);
+      state.mock.map((value) => value.id === action.payload.ids && count++);
       count !== 1 && (state.mock = [...state.mock, action.payload.all]);
     },
     deletes: (state, action) => {

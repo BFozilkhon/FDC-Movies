@@ -9,7 +9,6 @@ import {
   Container,
   Img,
   Title,
-  Wrapper,
 } from '../Kontakt/style';
 
 import Spinner from '../Spiner';
@@ -32,7 +31,7 @@ export const Favourite = () => {
         <Spinner />
       ) : (
         <Container>
-          {mock.length == 0 ? (
+          {mock.length === 0 ? (
             <h1 style={{ color: 'white' }}>There isn't movie here</h1>
           ) : (
             mock.map((value) => {

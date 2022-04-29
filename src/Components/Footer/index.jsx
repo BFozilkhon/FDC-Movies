@@ -20,13 +20,13 @@ export const Footer = () => {
           <Header>FDCMOVE</Header>
           <Item>Find the movie of your dreams!!!</Item>
           <Flexing>
-            <a target={'_blank'} href='https://www.facebook.com/'>
+            <a target={'blank'} href='https://www.facebook.com/'>
               <Facebook />
             </a>
-            <a target={'_blank'} href='https://www.instagram.com/?hl=ru'>
+            <a target={'blank'} href='https://www.instagram.com/?hl=ru'>
               <Instagram />
             </a>
-            <a target={'_blank'} href='https://www.youtube.com/'>
+            <a target={'blank'} href='https://www.youtube.com/'>
               <Youtube />
             </a>
           </Flexing>
