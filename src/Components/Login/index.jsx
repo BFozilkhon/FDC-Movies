@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import SendEmail from '../SendEmail';
 import {
   Btn,
   Container,
-  Div,
   Icon,
   Input,
   Item,
@@ -21,10 +19,10 @@ export const Login = () => {
         <Icon className='fa fa-key' />
         <Title>FDCMOVE</Title>
         <Item>Username</Item>
-        <Input onChange={(e) => setName(e.target.value)} type={'text'} />
+        <Input placeholder='UserName: Fozil' onChange={(e) => setName(e.target.value)} type={'text'} />
         <Item>Password</Item>
-        <Input onChange={(e) => setPass(e.target.value)} type={'password'} />
-        {name == 'Fozil' && pass == '2007' ? (
+        <Input placeholder='Password: 0297' onChange={(e) => setPass(e.target.value)} type={'password'} />
+        {name === 'Fozil' && pass === '0297' ? (
           <Btn onClick={() => navigate('/home')}>Login</Btn>
         ) : (
           <Btn>Login</Btn>

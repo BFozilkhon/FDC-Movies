@@ -34,11 +34,13 @@ const getFetch = createSlice({
         id: 1,
         name: 'Qora Beva',
         url: 'https://uzstudio.tv/uploads/posts/2021-06/medium/1624991320_qora-beva-1.jpg',
+        view: 'korilgan',
       },
       {
         id: 2,
         name: 'Shang-chi Legend of the ten rings',
         url: 'https://oyster.ignimgs.com/wordpress/stg.ign.com/2021/04/Shang-Chi-Poster-Marvel.jpg',
+        view: 'korilmagan',
       },
       {
         id: 3,

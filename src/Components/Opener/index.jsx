@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../Footer';
 import ContactUs from '../SendEmail';
 import './antd.css';
 import {
@@ -13,6 +14,7 @@ import {
 
 export const Opener = () => {
   return (
+    <>
     <Wrapper>
       <Carousels autoplay>
         <Marvels>
@@ -59,6 +61,9 @@ export const Opener = () => {
       </Item>
       <ContactUs />
     </Wrapper>
+      <Footer/>
+    </>
+
   );
 };
 

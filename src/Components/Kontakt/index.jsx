@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { save } from '../../redux/context';
 import Spinner from '../Spiner';
 import { Button, Card, Container, Img, Title } from './style';
@@ -8,12 +9,17 @@ export const Kontakt = () => {
   const [active, setActive] = useState(true);
   const data = useSelector((state) => state.moviesTodo.list);
   const localData = localStorage.getItem('Array');
-
+  const navigate = useNavigate()
   var a = JSON.parse(localData).map((item) => item.id);
   const dispatch = useDispatch();
   setTimeout(() => {
     setActive(false);
   }, 1000);
+
+  const getClicked = (value) => {
+   dispatch(save({ ids: value.id, all: value }))
+     navigate('/favourite')
+  } 
 
   return (
     <Container>
@@ -31,7 +37,7 @@ export const Kontakt = () => {
                     ? 'yellow'
                     : 'green',
                 }}
-                onClick={() => dispatch(save({ ids: value.id, all: value }))}
+                onClick={() => getClicked(value)}
               >
                 Favourite
               </Button>
@@ -42,5 +48,4 @@ export const Kontakt = () => {
     </Container>
   );
 };
-
 export default Kontakt;

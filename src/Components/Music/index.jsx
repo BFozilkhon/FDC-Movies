@@ -1,9 +1,6 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { musicApi } from '../../redux/music';
+import React from 'react';
 
 export const Music = () => {
-  const data = useSelector((state) => console.log(state.music));
   // const dispatch = useDispatch();
   // useEffect(() => {
   // dispatch(musicApi);

@@ -1,10 +1,11 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import { Button, Container, Item, NavLinks, Title, Wrapper } from './style';
 
 export const Navbar = () => {
   const navigate = useNavigate();
   return (
+    <>
     <Container>
       <Wrapper>
         <Title onClick={() => navigate('/home')}>FDCMOVE</Title>
@@ -17,6 +18,8 @@ export const Navbar = () => {
         <Button onClick={() => navigate('/')}>Login</Button>
       </Wrapper>
     </Container>
+    <Outlet/>
+    </>
   );
 };
 

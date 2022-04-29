@@ -54,9 +54,6 @@ export const ContactUs = () => {
       <Item>Izoh qoldiring</Item>
       <TextArea name='message' />
       <Btn type='submit' value='Send' />
-      <audio controls>
-        <source src='21994.mp3' />
-      </audio>
     </Form>
   );
 };
